@@ -7,7 +7,7 @@ WriteMakefile(
     'AUTHOR'        => 'Clinton Gormley <clint@traveljury.com>',
     'PREREQ_PM'    => {
                         'Test::More'                 => 0,
-                        'HTML::StripScripts::Parser' => 1.00,
+                        'HTML::StripScripts::Parser' => 1.01,
                         'HTML::StripScripts'         => 1.00,
                         'XML::LibXML'                => 1.59,
                       },

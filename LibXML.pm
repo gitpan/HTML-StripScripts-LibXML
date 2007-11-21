@@ -2,7 +2,7 @@ package HTML::StripScripts::LibXML;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '0.10';
+$VERSION = '0.11';
 
 =head1 NAME
 
@@ -224,6 +224,12 @@ options for the XML. I would welcome feedback from XML users as to how I could
 improve the interface.
 
 For this reason, the API may change.
+
+=item REPORTING BUGS
+
+Please report any bugs or feature requests to
+bug-html-stripscripts-libxml@rt.cpan.org, or through the web interface at
+L<http://rt.cpan.org>.
 
 =back
 

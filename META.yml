@@ -1,13 +1,13 @@
 --- #YAML:1.0
 name:                HTML-StripScripts-LibXML
-version:             0.10
+version:             0.11
 abstract:            XSS filter -  outputs a LibXML Document or DocumentFragment
 license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.32
 distribution_type:   module
 requires:     
     HTML::StripScripts:            1
-    HTML::StripScripts::Parser:    1
+    HTML::StripScripts::Parser:    1.01
     Test::More:                    0
     XML::LibXML:                   1.59
 meta-spec:
