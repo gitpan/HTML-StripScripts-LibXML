@@ -2,7 +2,8 @@
 use strict;
 
 BEGIN {
-
+binmode STDOUT,':utf8';
+binmode STDERR,':utf8';
     $^W = 1;
 
     use vars qw(@tests);
@@ -77,7 +78,7 @@ BEGIN {
         [ 'lonley "',          q{"},         q{"} ],
         [ 'lonley &',          q{&},         q{&amp;} ],
         [ 'valid entity',      q{&lt;},      q{&lt;} ],
-        [ 'uppercase entity',  q{&THORN;},   q{&amp;THORN;} ],
+        [ 'uppercase entity',  q{&THORN;},   qq{\x{00DE}} ],
         [ 'valid numeric ent', q{&#123;},    '{' ],
         [ 'valid hex entity',  q{&#x6B;},    q{k} ],
         [ 'unicode numeric',   q{&#3202;},   qq{\x{0C82}} ],

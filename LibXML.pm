@@ -2,7 +2,7 @@ package HTML::StripScripts::LibXML;
 use strict;
 
 use vars qw($VERSION);
-$VERSION = '0.11';
+$VERSION = '0.12';
 
 =head1 NAME
 
@@ -153,17 +153,12 @@ sub output_start { }
 *output             = \&output_start;
 #===================================
 
-my $Entities = { 'amp'  => '&',
-                 'lt'   => '<',
-                 'gt'   => '>',
-                 'quot' => '"',
-                 '#39'  => "'",
-};
 #===================================
 sub output_text {
 #===================================
     my ( $self, $text ) = @_;
-    HTML::Entities::_decode_entities( $text, $Entities );
+    HTML::Entities::decode_entities( $text);
+    utf8::upgrade($text);
     push @{ $self->{_hssStack}[0]{CHILDREN} },
         $self->{_hsxXML}->createTextNode($text);
     return;
